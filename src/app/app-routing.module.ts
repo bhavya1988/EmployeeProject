@@ -9,7 +9,7 @@ const routes: Routes = [
     path: 'employee',
     loadChildren: () =>
       import('./employee/employee.module').then((m) => m.EmployeeModule),
-    // canActivate: [EmployeeGuard],
+    canActivate: [EmployeeGuard],
   },
   { path: 'login', component: LoginComponent },
 ];
